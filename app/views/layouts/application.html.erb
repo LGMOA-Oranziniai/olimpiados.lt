@@ -23,7 +23,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <% @categories.each do |category| -%>
-            <a class="nav-item nav-link" href="#"><%= category.name[0...4] + "." %></a>
+            <%= link_to category.display_name, category_path(category), class: "nav-item nav-link" %>
           <% end -%>
         </div>
       </div>
