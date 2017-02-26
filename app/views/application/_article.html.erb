@@ -1,11 +1,7 @@
-<%= will_paginate @articles, class: "pagination_container" %>
+<div class="article">
+  <h4><%= article.title %></h4>
 
-<% @articles.each do |article| -%>
-  <div class="article">
-    <h4><%= article.title %></h4>
-
-    <div class="article-content">
-      <%= markdown(article.content) %>
-    </div>
+  <div class="article-content">
+    <%= markdown(article.content) %>
   </div>
-<% end -%>
+</div>
