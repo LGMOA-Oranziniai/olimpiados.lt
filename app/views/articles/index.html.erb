@@ -1,0 +1,8 @@
+<% @articles.each do |article| -%>
+  <div class="article">
+
+    <div class="content">
+      <%= markdown(article.content) %>
+    </div>
+  </div>
+<% end -%>
