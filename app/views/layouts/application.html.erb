@@ -1,14 +1,51 @@
+<% @categories = get_categories %>
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>OlimpiadosLt</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Olimpiados.lt</title>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
 
-  <body>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <%= link_to "Olimpiados.lt", root_path, class: "navbar-brand"  %>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <% @categories.each do |category| -%>
+            <a class="nav-item nav-link" href="#"><%= category.name[0...4] + "." %></a>
+          <% end -%>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <% flash.each do |name, msg| -%>
+      <%= msg %>
+    <% end -%>
+
     <%= yield %>
-  </body>
+  </div>
+  
+  <% if Rails.env.development? %>
+    <!-- <div class="alert alert-info alert-dismissible fade in" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <%= debug(params)%>
+    </div> -->
+  <% end %>
+
+</body>
 </html>

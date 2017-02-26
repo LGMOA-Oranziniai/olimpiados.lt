@@ -1,7 +1,8 @@
 <% @articles.each do |article| -%>
   <div class="article">
+  <h4><%= article.title %></h4>
 
-    <div class="content">
+    <div class="article-content">
       <%= markdown(article.content) %>
     </div>
   </div>

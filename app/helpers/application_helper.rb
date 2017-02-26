@@ -20,4 +20,8 @@ module ApplicationHelper
 
     markdown.render(text).html_safe
   end
+
+  def get_categories
+   Category.all
+  end
 end
