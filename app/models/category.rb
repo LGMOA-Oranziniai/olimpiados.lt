@@ -1,7 +1,6 @@
 class Category < ApplicationRecord
-  has_many :articles
+  extend FriendlyId
+  friendly_id :name, use: :slugged
 
-  def to_param
-    self.alias
-  end
+  has_many :articles
 end

@@ -29,7 +29,7 @@ category_keys["23"] = "LGMO"
 $categories = {}
 
 category_keys.each do |key, value|
-  $categories[key] = Category.create(name: value, alias: value.underscore, display_name: value[0...4])
+  $categories[key] = Category.create(name: value, display_name: value[0...4])
 end
 
 def get_category(id)

@@ -1,0 +1,10 @@
+<div class="article, main">
+  <% if @category %>
+    <h5><%= link_to @category.name, category_path(@category) %></h5>
+  <% end %>
+  <h2><%= @article.title %></h2>
+
+  <div class="article-content">
+    <%= markdown(@article.content) %>
+  </div>
+</div>
