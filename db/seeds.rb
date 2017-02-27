@@ -50,3 +50,6 @@ csv.each do |row|
     get_category(article["catid"]).articles << a
   end
 end
+
+
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
