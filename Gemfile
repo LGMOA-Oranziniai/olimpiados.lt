@@ -11,6 +11,7 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'font-awesome-sass', '~> 4.5.0'
+gem 'rails-i18n'
 
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'devise'

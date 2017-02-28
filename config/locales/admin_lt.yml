@@ -1,0 +1,14 @@
+lt:
+  activerecord:
+    models:
+      article:
+        one: "Straipsnis"
+        other: "Straipsniai"
+
+      category:
+        one: "Kategorija"
+        other: "Kategorijos"
+
+      admin_user:
+        one: "Administratorius"
+        other: "Administratoriai"
