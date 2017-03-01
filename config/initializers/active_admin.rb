@@ -138,14 +138,14 @@ ActiveAdmin.setup do |config|
   #
   # Enable and disable Batch Actions
   #
-  config.batch_actions = true
+  config.batch_actions = false
 
   # == Controller Filters
   #
   # You can add before, after and around filters to all of your
   # Active Admin resources and pages from here.
   #
-  # config.before_filter :do_something_awesome
+  config.before_filter :set_admin_locale
 
   # == Localize Date/Time Format
   #

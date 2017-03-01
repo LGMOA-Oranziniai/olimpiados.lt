@@ -16,6 +16,8 @@ gem 'rails-i18n'
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'devise'
 
+gem "paperclip", "~> 5.1.0"
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
