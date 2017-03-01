@@ -2,7 +2,7 @@ class Category < ApplicationRecord
   has_many :articles
 
   extend FriendlyId
-  friendly_id :name, use: :slugged
+  friendly_id :name, use: [:slugged, :finders]
 
   validates_presence_of :name, :slug
   validates_uniqueness_of :slug

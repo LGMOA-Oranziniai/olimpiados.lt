@@ -2,7 +2,7 @@ class Article < ApplicationRecord
   belongs_to :category
 
   extend FriendlyId
-  friendly_id :title, use: :slugged
+  friendly_id :title, use: [:slugged, :finders]
 
   validates_presence_of :title, :slug
   validates_uniqueness_of :slug

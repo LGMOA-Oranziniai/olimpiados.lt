@@ -146,6 +146,7 @@ ActiveAdmin.setup do |config|
   # Active Admin resources and pages from here.
   #
   config.before_filter :set_admin_locale
+  config.prepend_before_filter :revert_friendly_id, :if => -> { !devise_controller? && resource_controller? }
 
   # == Localize Date/Time Format
   #
@@ -271,10 +272,23 @@ ActiveAdmin.setup do |config|
   # config.include_default_association_filters = true
 end
 
-ActiveAdmin::ResourceController.class_eval do
-  def find_resource
-    return scoped_collection.where(slug: params[:id]).first! if resource_class.is_a?(FriendlyId)
+ActiveAdmin::BaseController.class_eval do
 
-    scoped_collection.where(id: params[:id]).first!
+  protected
+  def resource_controller?
+    self.class.superclass.name == "ActiveAdmin::ResourceController"
+  end
+
+  def revert_friendly_id
+    model_name = self.class.name.match(/::(.*)Controller$/)[1].singularize
+    # Will throw a NameError if the class does not exist
+    Module.const_get model_name
+
+    eval(model_name).class_eval do
+      def to_param
+        id.to_s
+      end
+    end
+  rescue NameError
   end
 end
