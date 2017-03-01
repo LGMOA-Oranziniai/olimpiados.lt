@@ -1,4 +1,8 @@
 ActiveAdmin.register Category do
+  controller do
+    defaults finder: :find_by_slug
+  end
+  
   permit_params :name, :slug, :display_name
 
   index do

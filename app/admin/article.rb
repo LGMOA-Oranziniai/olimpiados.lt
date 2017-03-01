@@ -1,5 +1,9 @@
 ActiveAdmin.register Article do
-  belongs_to :category, optional: true
+  controller do
+    defaults finder: :find_by_slug
+  end
+  
+  belongs_to :category, optional: true, finder: :find_by_slug
 
   permit_params :category_id, :title, :slug, :content
 
@@ -21,6 +25,16 @@ ActiveAdmin.register Article do
       h2 a.title
       article markdown(a.content)
     end
+  end
+
+  form do |f|
+    f.semantic_errors
+    f.inputs do
+      input :title
+      input :slug
+      input :content
+    end
+    f.actions
   end
 
 end
