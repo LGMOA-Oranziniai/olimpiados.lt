@@ -13,9 +13,9 @@ ActiveAdmin.register Article do
       link_to article.title, admin_article_path(article)
     end
     column :created_at
-    # column "Category" do |article|
-    #   link_to article.category.name, admin_category_a_path(article.category) if article.category
-    # end
+    column "Category" do |article|
+      link_to article.category.name, admin_category_articles_path(article.category) if article.category
+    end
     actions
   end
 
