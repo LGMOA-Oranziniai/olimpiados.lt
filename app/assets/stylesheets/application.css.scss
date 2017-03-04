@@ -18,8 +18,8 @@
 
 .pagination_container
 {
-  background: #f1f1f1;
-  border: 1px solid #e5e5e5;
+  // background: #f1f1f1;
+  // border: 1px solid #e5e5e5;
   text-align: center;
   padding: 1em;
   cursor: default;
@@ -53,7 +53,11 @@
   text-decoration: none;
   color: black;
 }
-  .pagination_container a:hover, .pagination_container a:focus
-  {
-    text-decoration: underline;
-  }
+.pagination_container a:hover, .pagination_container a:focus
+{
+  text-decoration: underline;
+}
+
+.container img{
+  max-width: 100%;
+}
