@@ -1,4 +1,13 @@
 module ApplicationHelper
+  def image_for_name(block)
+    name =/\{\%image (.*?)\%\}/.match(block)[1]
+    if Image.find_by_name(name)
+      image_tag Image.find_by_name(name).file.url
+    else
+      ""
+    end
+  end
+
   def markdown(text)
     options = {
       filter_html:     true,
@@ -18,7 +27,9 @@ module ApplicationHelper
     renderer = Redcarpet::Render::HTML.new(options)
     markdown = Redcarpet::Markdown.new(renderer, extensions)
 
-    markdown.render(text).html_safe
+    html = markdown.render(text)
+    html = html.gsub(/\{\%image (.*?)\%\}/) {|m| image_for_name(m) }
+    html.html_safe
   end
 
   def get_categories
