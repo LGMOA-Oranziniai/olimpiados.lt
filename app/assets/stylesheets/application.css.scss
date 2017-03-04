@@ -17,6 +17,14 @@
 
 @import "bootstrap";
 
+a {
+  color: #f0983b;
+}
+
+a:hover{
+  color: #d0882b;
+}
+
 .pagination_container
 {
   // background: #f1f1f1;
@@ -74,7 +82,7 @@
 .footer{
   padding: 32px;
   border-radius: 16px;
-  background-color: #f0c373;
+  background-color: #f4e7a0;
 }
 
 .sponsors ul {
