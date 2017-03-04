@@ -31,13 +31,9 @@
   </nav>
 
   <div class="container">
-    <%= image_tag("title.jpg", :alt => "Olimpiados.lt", :title => "Puslapis naujas, paveikslėlis- nelabai") %>
-
-    <% flash.each do |name, msg| -%>
-      <%= msg %>
-    <% end -%>
-
+    <%= render "layouts/header" %>
     <%= yield %>
+    <%= render "layouts/footer" %>
   </div>
   
   <% if Rails.env.development? %>

@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.paginate(:page => params[:page], :per_page => 30)
+    @articles = Article.paginate(:page => params[:page], :per_page => 20)
   end
 
   def show
