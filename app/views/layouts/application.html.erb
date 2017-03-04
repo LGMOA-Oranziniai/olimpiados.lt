@@ -1,4 +1,5 @@
 <% @categories = get_categories %>
+<% @sponsors = get_sponsors %>
 
 <!DOCTYPE html>
 <html>
@@ -32,17 +33,19 @@
 
   <div class="container">
     <%= render "layouts/header" %>
-    <%= yield %>
+    <div class="row">
+      <div class="col-sm-9"><%= yield %></div>
+      <div class="col-sm-3 sidebar"><%= render "layouts/sidebar" %></div>
+    </div>
+    <% if @articles %>
+      <%= will_paginate @articles, class: "pagination_container" %>
+    <% end %>
+
     <%= render "layouts/footer" %>
   </div>
   
   <% if Rails.env.development? %>
-    <!-- <div class="alert alert-info alert-dismissible fade in" role="alert">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
       <%= debug(params)%>
-    </div> -->
   <% end %>
 
 </body>

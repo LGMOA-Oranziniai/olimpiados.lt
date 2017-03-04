@@ -24,4 +24,8 @@ module ApplicationHelper
   def get_categories
    Category.all
   end
+
+  def get_sponsors
+   Sponsor.all
+  end
 end
