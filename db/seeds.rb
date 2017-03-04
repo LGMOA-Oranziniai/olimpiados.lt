@@ -47,7 +47,7 @@ ind = csv.length
 csv.each do |row|
   article = row.to_hash
   p article["title"] + ind.to_s
-  a = Article.create(id: ind, title: article["title"], content: article["text"], created_at: Date.parse(article["created"]))
+  a = Article.create(id: ind, title: article["title"], content: article["text"], created_at: DateTime.parse(article["created"]))
   if get_category(article["catid"])
     get_category(article["catid"]).articles << a
   end

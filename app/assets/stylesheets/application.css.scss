@@ -12,6 +12,7 @@
  *
  require_tree .
  *= require_self
+ *= require articles.scss
  */
 
 @import "bootstrap";
@@ -60,4 +61,8 @@
 
 .container img{
   max-width: 100%;
+  max-height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
 }

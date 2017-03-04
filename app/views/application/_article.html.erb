@@ -1,7 +1,12 @@
 <div class="article">
-  <h4><%= link_to article.title, article_path(article) %></h4>
+  <h4 class="article-title"><%= link_to article.title, article_path(article) %></h4>
 
   <div class="article-content">
     <%= markdown(article.content) %>
   </div>
+
+  <div class="article-info">
+    <%= I18n.l(article.created_at, :format => :long).sub(/^./, &:upcase) %>
+  </div>
 </div>
+<hr>
