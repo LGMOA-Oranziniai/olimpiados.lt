@@ -1,4 +1,5 @@
 lt:
   will_paginate:
     previous_label: "<"
+    page_gap: ":D"
     next_label: ">"

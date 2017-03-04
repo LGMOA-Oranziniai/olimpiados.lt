@@ -7,6 +7,7 @@ class Article < ApplicationRecord
   validates_presence_of :title, :slug
   validates_uniqueness_of :slug
 
+  default_scope { order(created_at: :desc) }
 
   before_validation(on: :create) do
     self.slug = self.title if self.slug.empty?

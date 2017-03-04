@@ -1,0 +1,5 @@
+<%= form_for @article do |f| %>
+    <%= md_simple_editor do %>
+        <%= f.text_area :content %>
+    <% end %>
+<% end %>

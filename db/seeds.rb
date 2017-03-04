@@ -41,14 +41,17 @@ def get_category(id)
 end
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'olimpiados.lt.content.csv'))
-csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1', :col_sep => " ", :quote_char => "|")
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1', :col_sep => ",", :quote_char => '"')
 
+ind = csv.length
 csv.each do |row|
   article = row.to_hash
-  a = Article.create(title: article["title"], content: article["text"])
+  p article["title"] + ind.to_s
+  a = Article.create(id: ind, title: article["title"], content: article["text"], created_at: Date.parse(article["created"]))
   if get_category(article["catid"])
     get_category(article["catid"]).articles << a
   end
+  ind = ind - 1
 end
 
 
