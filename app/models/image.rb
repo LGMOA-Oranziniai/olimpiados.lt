@@ -1,5 +1,5 @@
 class Image < ApplicationRecord
-  has_attached_file :file, styles: {thumb: "100x100#", original: "1024x1024>"}, :use_timestamp => false
+  has_attached_file :file, styles: {thumb: "100x100", original: "1024x1024>"}, :use_timestamp => false
 
   validates_uniqueness_of :file_file_name
   validates_attachment_presence :file
