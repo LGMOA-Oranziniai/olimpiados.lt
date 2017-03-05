@@ -7,8 +7,11 @@ class Category < ApplicationRecord
   validates_presence_of :name, :slug
   validates_uniqueness_of :slug
 
-
   before_validation(on: :create) do
     self.slug = self.name.parameterize if self.slug.empty?
+  end
+
+  def self.only_visible
+    Category.where(visible: true)
   end
 end

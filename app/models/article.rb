@@ -12,4 +12,8 @@ class Article < ApplicationRecord
   before_validation(on: :create) do
     self.slug = self.title if self.slug.empty?
   end
+
+  def self.only_visible
+    Article.where(visible: true)
+  end
 end

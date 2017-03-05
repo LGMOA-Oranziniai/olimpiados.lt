@@ -4,6 +4,7 @@ class CreateSponsors < ActiveRecord::Migration[5.0]
       t.string :name
       t.integer :image_id
       t.string :url
+      t.boolean :visible, null: false, default: true
 
       t.timestamps
     end

@@ -33,10 +33,10 @@ module ApplicationHelper
   end
 
   def get_categories
-   Category.all
+   Category.only_visible
   end
 
   def get_sponsors
-   Sponsor.all
+   Sponsor.only_visible
   end
 end

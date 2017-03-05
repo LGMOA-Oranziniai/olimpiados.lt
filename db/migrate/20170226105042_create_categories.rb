@@ -4,6 +4,7 @@ class CreateCategories < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :slug
       t.string :display_name
+      t.boolean :visible, null: false, default: true
 
       t.timestamps
     end
