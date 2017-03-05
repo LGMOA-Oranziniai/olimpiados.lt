@@ -2,6 +2,11 @@
   <% if @category %>
     <h5><%= link_to @category.name, category_path(@category) %></h5>
   <% end %>
+
+  <div class="article-info">
+    <%= I18n.l(@article.created_at, :format => :long).sub(/^./, &:upcase) %>
+  </div>
+  
   <h2><%= @article.title %></h2>
 
   <div class="article-content">
