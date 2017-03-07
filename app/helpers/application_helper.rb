@@ -39,4 +39,8 @@ module ApplicationHelper
   def get_sponsors
    Sponsor.only_visible
   end
+
+  def get_links
+   Link.only_visible
+  end
 end

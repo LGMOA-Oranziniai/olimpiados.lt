@@ -1,3 +1,14 @@
+<div class="links menu">
+  <h4>Nuorodos</h4>
+  <ul>
+    <% @links.each do |link| -%>
+      <li>
+        <%= link_to link.name, link.url, target: :blank, title: link.name %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
 <div class="sponsors menu">
   <h4>Rėmėjai</h4>
   <ul>

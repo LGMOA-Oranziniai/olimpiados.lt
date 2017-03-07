@@ -1,5 +1,6 @@
 <% @categories = get_categories %>
 <% @sponsors = get_sponsors %>
+<% @links = get_links %>
 
 <!DOCTYPE html>
 <html>
@@ -16,7 +17,7 @@
 <body>
 
   <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-    <div class="container">
+    <div class="container expand">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,8 +35,8 @@
   <div class="container">
     <%= render "layouts/header" %>
     <div class="row">
-      <div class="col-sm-9"><%= yield %></div>
-      <div class="col-sm-3 sidebar"><%= render "layouts/sidebar" %></div>
+      <div class="col-lg-9"><%= yield %></div>
+      <div class="col-lg-3 sidebar"><%= render "layouts/sidebar" %></div>
     </div>
     <% if @articles %>
       <%= will_paginate @articles, class: "pagination_container" %>
