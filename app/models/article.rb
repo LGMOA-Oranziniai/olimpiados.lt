@@ -11,7 +11,7 @@ class Article < ApplicationRecord
   default_scope { order(created_at: :desc) }
 
   before_validation(on: :create) do
-    self.slug = self.title if self.slug.empty?
+    self.slug = self.title.parameterize if self.slug.empty?
   end
 
   def intro_text
