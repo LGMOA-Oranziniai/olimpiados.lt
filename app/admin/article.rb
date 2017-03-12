@@ -41,6 +41,7 @@ ActiveAdmin.register Article do
     f.inputs do
       input :title
       input :slug
+      input :category_id
       input :content
     end
     f.actions
