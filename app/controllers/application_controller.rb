@@ -3,10 +3,10 @@ class ApplicationController < ActionController::Base
   before_filter :set_site_locale
   
   def set_site_locale
-    I18n.locale = :lt
+    I18n.locale = (self.class <= ActiveAdmin::BaseController) ? :en : :lt
   end
 
   def set_admin_locale
-    I18n.locale = :en
+    I18n.locale = (self.class <= ActiveAdmin::BaseController) ? :en : :lt
   end
 end

@@ -9,6 +9,8 @@ module ApplicationHelper
   end
 
   def markdown(text)
+    text = "" if not text
+    
     options = {
       filter_html:     true,
       hard_wrap:       true,
