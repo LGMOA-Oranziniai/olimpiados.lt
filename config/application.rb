@@ -13,6 +13,6 @@ module OlimpiadosLt
     # -- all .rb files in that directory are automatically loaded.
 
 
-    config.i18n.default_locale = :'lt'
+    # config.i18n.default_locale = :'lt'
   end
 end
