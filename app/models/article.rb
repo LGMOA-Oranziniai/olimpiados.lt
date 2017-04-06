@@ -18,8 +18,8 @@ class Article < ApplicationRecord
     content.split("\n\n", 2)[0]
   end
 
-  def only_intro
-    content.split("\n\n").length == 1
+  def has_only_intro?
+    content.split("\n\n").length <= 1
   end
 
   def self.only_visible
