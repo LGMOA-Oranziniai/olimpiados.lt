@@ -2,9 +2,10 @@ module ApplicationHelper
   def image_for_name(block)
     name =/\{\%image (.*?)\%\}/.match(block)[1]
     if Image.find_by_name(name)
-      image_tag Image.find_by_name(name).file.url
+      img = image_tag Image.find_by_name(name).file.url
+      img = '<a href="' + Image.find_by_name(name).file.url + '" data-lightbox="' + name + '">' + img + '</a>'
     else
-      ""
+      img = ""
     end
   end
 

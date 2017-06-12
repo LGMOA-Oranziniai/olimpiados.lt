@@ -16,3 +16,10 @@
 
 //= require tether
 //= require bootstrap-sprockets
+
+//= require lightbox
+
+$(document).on('ready page:load', function(event) {
+  console.log("load");
+  lightbox.init();
+});

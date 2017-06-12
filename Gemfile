@@ -30,6 +30,7 @@ gem 'coffee-rails', '~> 4.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-ui-rails', '4.2.1'
+gem 'lightbox2-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 # gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -42,9 +43,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'will_paginate', '~> 3.1.0'
 gem 'friendly_id', '~> 5.1.0', :require => "friendly_id"
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 gem 'redcarpet'
 
 group :development, :test do
@@ -53,6 +51,8 @@ group :development, :test do
   gem 'random-word'
 end
 
+gem 'figaro'
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
@@ -60,6 +60,15 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # Use Capistrano for deployment
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  # gem 'capistrano-rbenv'
+  gem 'capistrano-rvm'
+  gem 'capistrano-passenger'
+  gem 'capistrano-figaro-yml'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
