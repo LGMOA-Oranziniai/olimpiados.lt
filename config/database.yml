@@ -22,4 +22,4 @@ test:
 
 production:
   <<: *default
-  database: ../shared/db/production.sqlite3
+  database: /var/www/olimpiados.lt/shared/db/production.sqlite3
