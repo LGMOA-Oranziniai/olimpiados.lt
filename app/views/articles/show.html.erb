@@ -6,6 +6,10 @@
   <div class="article-info">
     <%= I18n.l(@article.created_at, :format => :long).sub(/^./, &:upcase) %>
   </div>
+
+  <% if admin_user_signed_in? %>
+    <h6 class="article-title"><%= link_to icon('pencil', class: 'fa-2x'), edit_admin_article_path(@article) %></h4>
+  <% end %>
   
   <h2><%= @article.title %></h2>
 
