@@ -12,5 +12,3 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += ['active_admin.css']
 Rails.application.config.assets.precompile += ['simplemde.min.css']
 Rails.application.config.assets.precompile += %w( lightbox/* )
-
-Rails.application.config.assets.paths += Dir["#{Rails.root}/vendor/*"].sort_by { |dir| -dir.size }

@@ -14,14 +14,13 @@
  *= require_self
  *= require articles.scss
  *= require lightbox
+ *= require simplemde.min.css
 
  */
 
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
-@import "simplemde.min.css";
 
 a {
   color: #f0983b;
