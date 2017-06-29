@@ -19,6 +19,8 @@
 
 //= require lightbox
 
+//= require simplemde.min.js
+
 $(document).on('ready page:load', function(event) {
   console.log("load");
   lightbox.init();

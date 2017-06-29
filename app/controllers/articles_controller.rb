@@ -7,4 +7,23 @@ class ArticlesController < ApplicationController
     @article = Article.friendly.find(params[:title])
     @category = @article.category
   end
+
+  def edit
+    authenticate_admin_user!
+
+    @article = Article.friendly.find(params[:title])
+    @category = @article.category
+  end
+
+  def update
+    authenticate_admin_user!
+    
+    @article = Article.friendly.find(params[:title])
+    if @article.update_attributes(params.require(:article).permit(:content))
+      flash[:success] = "Straipsnis atnaujintas"
+      redirect_to @article
+    else
+      render 'edit'
+    end
+  end
 end

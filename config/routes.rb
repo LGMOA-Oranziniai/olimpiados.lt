@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
 
   resources :categories, only: :show, param: :name, path: ""
-  resources :articles, path: "straipsniai", only: :show, param: :title
+  resources :articles, path: "straipsniai", only: [:show, :edit, :update], param: :title
 
   # get 'articles/index'
   # get 'categories/show'

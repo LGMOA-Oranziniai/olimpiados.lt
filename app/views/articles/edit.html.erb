@@ -7,13 +7,16 @@
     <%= I18n.l(@article.created_at, :format => :long).sub(/^./, &:upcase) %>
   </div>
 
-  <% if admin_user_signed_in? %>
-    <h6 class="article-title"><%= link_to icon('pencil', class: 'fa-2x'), edit_article_path(@article) %></h4>
-  <% end %>
-  
   <h2><%= @article.title %></h2>
 
-  <div class="article-content">
-    <%= markdown(@article.content) %>
-  </div>
+
+  <%= form_for(@article) do |f| %>
+    <%= f.text_area :content, class: 'form-control' %>
+
+    <%= f.submit "Išsaugoti", class: "btn btn-primary" %>
+  <% end %>
+
+  <script>
+    var s = new SimpleMDE({element: document.getElementById("article_content")})
+  </script>
 </div>
