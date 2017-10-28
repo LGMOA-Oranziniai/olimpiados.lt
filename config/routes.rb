@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :articles, path: "straipsniai", only: [:show, :edit, :update], param: :title
 
   get 'static_pages/about_us'
+  get 'static_pages/contacts'
 
   # get 'articles/index'
   # get 'categories/show'
