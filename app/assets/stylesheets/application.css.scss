@@ -73,6 +73,7 @@ a:hover{
 }
 
 .header{
+  background-color: #fdcf59;
   margin-bottom: 1rem;
 }
 
@@ -97,11 +98,11 @@ a:hover{
   }
 
   a {
-    color: #4444FF;
+    color: #444;
   }
 
   a:hover {
-    color: #2222AA;
+    color: #222;
   }
 
   li {
@@ -144,8 +145,8 @@ a:hover{
 
   .menu{
     text-align: right;
-    border-radius: 8px;
-    border: 1px solid #e3e3e3;
+    // border-radius: 8px;
+    // border: 1px solid #e3e3e3;
     padding: 5px;
     margin-bottom: 2rem;
   }
