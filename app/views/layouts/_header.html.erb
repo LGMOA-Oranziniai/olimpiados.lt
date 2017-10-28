@@ -1,7 +1,17 @@
 <div class="header">
   <%= image_tag("title.jpg", :alt => "Olimpiados.lt", :title => "Puslapis naujas, paveikslėlis- nelabai") %>
 
+  <nav role="navigation" class="navigation">
+    <ul>
+      <li><%= link_to "Pradžia", root_path %></li>
+      <li><%= link_to "Apie mus", :controller => :static_pages, :action => :about_us %></li>
+      <li><%= link_to "Biblioteka", "https://drive.google.com/drive/folders/0B8nfBPlxBJSTaWJlVXJ4SUFGRGM?usp=sharing" , target: :blank %></li>
+    </ul>
+  </nav>
+
   <% flash.each do |name, msg| -%>
     <%= msg %>
   <% end -%>
+
+  <hr>
 </div>

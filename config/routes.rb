@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :categories, only: :show, param: :name, path: ""
   resources :articles, path: "straipsniai", only: [:show, :edit, :update], param: :title
 
+  get 'static_pages/about_us'
+
   # get 'articles/index'
   # get 'categories/show'
 
