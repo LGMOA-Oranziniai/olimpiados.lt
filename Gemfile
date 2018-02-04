@@ -16,7 +16,7 @@ gem 'rails-i18n'
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'devise'
 
-gem "paperclip", "~> 5.1.0"
+gem "paperclip", "~> 5.2.1"
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
@@ -62,7 +62,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   # Use Capistrano for deployment
-  gem 'capistrano'
+  gem 'capistrano', '3.10.0'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
   # gem 'capistrano-rbenv'
