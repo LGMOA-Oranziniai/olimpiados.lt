@@ -9,7 +9,7 @@ gem 'sqlite3'
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '~> 4.0.0'
 gem 'font-awesome-sass', '~> 4.5.0'
 gem 'rails-i18n'
 

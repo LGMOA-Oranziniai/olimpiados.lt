@@ -15,6 +15,7 @@
 //= require_tree .
 
 //= require tether
+//= require popper
 //= require bootstrap-sprockets
 
 //= require lightbox
