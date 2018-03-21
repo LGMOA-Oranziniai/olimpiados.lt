@@ -40,7 +40,9 @@ ActiveAdmin.register Article do
     f.semantic_errors
     f.inputs do
       input :title
-      input :slug
+      if !f.object.new_record?
+        input :slug
+      end
       input :category
       input :content
     end
