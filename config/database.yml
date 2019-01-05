@@ -21,5 +21,10 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: /var/www/olimpiados.lt/shared/db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  database: olimpiados_lt
+  username: olimpiados_user
+  password: <%= ENV["OLIMPIADOS_DATABASE_PASSWORD"] %>
+  host: 127.0.0.1
+  port: 3306
