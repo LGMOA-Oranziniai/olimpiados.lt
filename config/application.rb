@@ -14,5 +14,7 @@ module OlimpiadosLt
 
 
     # config.i18n.default_locale = :'lt'
+
+    config.time_zone = 'Europe/Vilnius'
   end
 end
