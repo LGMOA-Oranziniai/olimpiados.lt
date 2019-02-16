@@ -1,6 +1,6 @@
 <div class="article">
   <% if admin_user_signed_in? %>
-    <h6 class="article-title"><%= link_to icon('pencil'), edit_article_path(article) %></h4>
+    <h6 class="article-title"><%= link_to fa_icon('pencil', class: 'fa-2x'), edit_article_path(article) %></h4>
   <% end %>
 
   <h4 class="article-title"><%= link_to article.title, article_path(article) %></h4>

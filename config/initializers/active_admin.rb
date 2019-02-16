@@ -145,7 +145,7 @@ ActiveAdmin.setup do |config|
   # You can add before, after and around filters to all of your
   # Active Admin resources and pages from here.
   #
-  config.before_filter :set_admin_locale
+  config.before_action :set_admin_locale
 
   # == Localize Date/Time Format
   #
@@ -269,4 +269,8 @@ ActiveAdmin.setup do |config|
   # of those filters by default here.
   #
   # config.include_default_association_filters = true
+
+  meta_tags_options = { viewport: 'width=device-width, initial-scale=1' }
+  config.meta_tags = meta_tags_options
+  config.meta_tags_for_logged_out_pages = meta_tags_options
 end
