@@ -1,10 +1,6 @@
 ActiveAdmin.register Article do
   controller do
     defaults finder: :find_by_slug
-
-    def toggle_visibility
-
-    end
   end
   
   belongs_to :category, optional: true, finder: :find_by_slug
