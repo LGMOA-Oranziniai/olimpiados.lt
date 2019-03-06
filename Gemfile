@@ -15,6 +15,10 @@ gem 'activeadmin', '~> 1.4.3'
 gem 'arctic_admin',  '~> 1.5.1'
 gem 'devise', '~> 4.6.1'
 
+# To add ordering ability to models
+gem 'acts_as_list'
+gem 'activeadmin_sortable_table', :git => 'git@github.com:Kristonitas/activeadmin_sortable_table.git', :branch => 'fix/authenticity-token'
+
 gem "paperclip", "~> 5.3.0"
 
 source 'https://rails-assets.org' do
@@ -52,6 +56,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'random-word'
   gem 'bundler-audit'
+  gem 'rb-readline', '~> 0.5.3'
 end
 
 gem 'figaro', '~> 1.1.1'
