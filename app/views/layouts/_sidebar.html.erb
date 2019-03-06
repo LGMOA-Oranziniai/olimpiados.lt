@@ -12,7 +12,7 @@
 <div class="sponsors menu">
   <h4>Rėmėjai</h4>
   <ul>
-    <% @sponsors.each do |sponsor| -%>
+    <% @sponsors.order(:position).each do |sponsor| -%>
       <li>
         <%= link_to sponsor.url, target: :blank, title: sponsor.name do  %>
           <%= image_tag sponsor.image.file.url %>
