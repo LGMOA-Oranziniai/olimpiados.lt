@@ -17,7 +17,7 @@ gem 'devise', '~> 4.6.1'
 
 # To add ordering ability to models
 gem 'acts_as_list'
-gem 'activeadmin_sortable_table', :git => 'https://github.com/Kristonitas/activeadmin_sortable_table.git', :branch => 'fix/authenticity-token'
+gem 'activeadmin_sortable_table'
 
 gem "paperclip", "~> 5.3.0"
 
