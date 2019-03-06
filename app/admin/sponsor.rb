@@ -1,7 +1,11 @@
 ActiveAdmin.register Sponsor do
-  permit_params :name, :image_id, :url, :visible
+  include ActiveAdmin::SortableTable # creates the controller action which handles the sorting
+  config.sort_order = 'position_asc' # assumes you are using 'position' for your acts_as_list column
+
+  permit_params :name, :image_id, :url, :visible, :position
 
   index do
+    handle_column
     id_column
     column :name
     column :url
