@@ -6,8 +6,11 @@ ActiveAdmin.register_page "Dashboard" do
     div class: "blank_slate_container", id: "dashboard_default_message" do
       span class: "blank_slate" do
         "Sveiki oranžiniai! Linkiu gerai praleisti laiką rašant naujus straipsnius."
-        # span I18n.t("active_admin.dashboard_welcome.welcome")
-        # small I18n.t("active_admin.dashboard_welcome.call_to_action")
+      end
+      br
+      span class: "blank_slate" do
+        "Norint pakeisti kontaktus, redaguokite šį straipsnį: ".html_safe +
+        (Article.footer_article ? link_to(Article.footer_title, edit_admin_article_path(Article.footer_article)) : "sukurkit straipsnį pavadinimu " + Article.footer_title + "!")
       end
     end
 

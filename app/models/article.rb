@@ -26,6 +26,14 @@ class Article < ApplicationRecord
     Article.where(visible: true)
   end
 
+  def self.footer_title
+    "Footer"
+  end
+
+  def self.footer_article
+    Article.find_by(title: Article.footer_title)
+  end
+
   protected
 
   def normalize_line_endings
