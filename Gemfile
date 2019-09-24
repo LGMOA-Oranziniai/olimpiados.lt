@@ -2,18 +2,18 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.2'
+gem 'rails', '~> 5.2.3'
 # Use Puma as the app server
-gem 'puma', '~> 3.12.0'
+gem 'puma', '~> 3.12.1'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0.7'
+gem 'sass-rails', '~> 5.0.8'
 gem 'bootstrap', '~> 4.3.1'
 gem 'rails-i18n', '~> 5.1.3'
 gem 'font-awesome-rails', '~> 4.7.0.4'
 
 gem 'activeadmin', '~> 1.4.3'
 gem 'arctic_admin',  '~> 1.5.1'
-gem 'devise', '~> 4.6.1'
+gem 'devise', '~> 4.7.1'
 
 # To add ordering ability to models
 gem 'acts_as_list'
