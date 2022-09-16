@@ -2,7 +2,7 @@
 lock "3.10.0"
 
 set :application, "olimpiados.lt"
-set :repo_url, "https://github.com/Kristonitas/olimpiados.lt"
+set :repo_url, "https://github.com/vverna/olimpiados.lt"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
